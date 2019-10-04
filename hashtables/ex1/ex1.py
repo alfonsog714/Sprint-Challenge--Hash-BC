@@ -1,17 +1,12 @@
 #  Hint:  You may not need all of these.  Remove the unused functions.
 from hashtables import (HashTable,
                         hash_table_insert,
-                        hash_table_remove,
-                        hash_table_retrieve,
-                        hash_table_resize)
+                        hash_table_retrieve)
 
 
 def get_indices_of_item_weights(weights, length, limit):
     ht = HashTable(16)
 
-    """
-    YOUR CODE HERE
-    """
     for i in range(len(weights)):
         hash_table_insert(ht, weights[i], i)
     
@@ -32,11 +27,11 @@ def print_answer(answer):
         print("None")
 
 
-if __name__ == '__main__':
-    # weights_1 = [9]
-    # print("LINE 54:", get_indices_of_item_weights(weights_1, 1, 9))
-    # weights_2 = [4, 4]
-    # print("LINE 56:", get_indices_of_item_weights(weights_2, 2, 8))
+# if __name__ == '__main__':
+#     # weights_1 = [9]
+#     # print("LINE 54:", get_indices_of_item_weights(weights_1, 1, 9))
+#     # weights_2 = [4, 4]
+#     # print("LINE 56:", get_indices_of_item_weights(weights_2, 2, 8))
 
-    weights_1 = [9]
-    get_indices_of_item_weights(weights_1, 4, 20)
+#     weights_1 = [9]
+#     get_indices_of_item_weights(weights_1, 4, 20)
